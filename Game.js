@@ -8,7 +8,7 @@ var activity = 0;
 // input
 var keysPressed = [], mouseMode = true;
 // texte
-var text, lang = "en";
+var text, lang = "fr";
 const font = "18px unispace", fontCode = "18px Courier New", fontTitle = "30px unispace", fontLarge = "20px unispace";
 // fonctions programmées
 var delayFrames = [], delayFunction = [], delayArg = [];
@@ -275,7 +275,7 @@ function start()
 	chacs.scaleY = 0.5;
 	chacs.alpha = 0.8;
 
-	var credits = new createjs.Text("CHACSGAMES - v0.4 - July 2020", font, "#bbb");
+	var credits = new createjs.Text(text.get("m_cre"), font, "#bbb");
 
 	credits.name = "text credits";
 	credits.x = 80;
@@ -417,7 +417,7 @@ function start()
 				});
 				editorButtons.push(button);
 
-				button = new Button("Generate a Level (WIP)", canvas.width / 2, 325, 200, "#999");
+				button = new Button(text.get("m_e_gen"), canvas.width / 2, 325, 200, "#999");
 				button.label.on("click", function(event)
 				{
 					if (activity == 1)
@@ -425,7 +425,7 @@ function start()
 				});
 				editorButtons.push(button);
 
-				button = new Button("Shared Levels (WIP)", canvas.width / 2, 350, 200, "#999");
+				button = new Button(text.get("m_e_sha"), canvas.width / 2, 350, 200, "#999");
 				button.label.on("click", function(event)
 				{
 					if (activity == 1)
@@ -530,6 +530,7 @@ function start()
 
 						normalLevelsText.text = text.get("m_l_nl");
 						hardLevelsText.text = text.get("m_l_hl");
+						credits.text = text.get("m_cre");
 
 						optionButtons[0].updateText(createjs.Sound.muted ? text.get("m_o_sn0") : text.get("m_o_sn1"));
 						optionButtons[1].updateText(mouseMode ? text.get("m_o_mos") : text.get("m_o_mok"))
