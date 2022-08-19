@@ -20,29 +20,37 @@
 	<script src="Text.js"></script>
 	<style type="text/css">
 		@font-face {font-family: unispace; src: url(UNISPACE.TTF);}
+		#game {display: flex; margin: 0 auto;}
 		canvas {border: thin black solid;}
-		h1 {color: #058; font-size: 30px; margin: 30px 5px 20px 50px; font-family: unispace;}
+		h1 {color: #577; font-size: 50px; width: 100%; text-align: center; font-family: unispace;}
+		h2 {color: #577; font-size: 30px; margin: 30px 5px 20px 50px; font-family: unispace;}
 		p, a {font-family: Calibri, Verdana; color: #330; margin: 5px 20px 5px 20px; font-size: 16px;}
 		a {color: #0ac;}
+		hr {color: #577; margin: 10px 20px}
 	</style>
 </head>
 <body onload="init();">
+	<h1>Bullet Hell Maker</h1>
+	<hr />
+
 	<canvas id="game" width="600" height="600">
 		
 	</canvas>
 
-	<h1>Qu'est ce que Bullet Hell Maker ?</h1>
+	<hr />
+	<h2>Qu'est ce que Bullet Hell Maker ?</h2>
 
 	<p>Bullet Hell Maker est un éditeur développé par Arnaud Roemer, sous le pseudonyme "ChacsGames" en 2020. Il s'agit d'un jeu vidéo d'action conçu pour les ordinateurs, dont les niveaux peuvent être créés par les joueurs, à l'aide d'une interface, puis partagés via un code JSON.</p>
 
-	<h1>Quel est le concept du jeu ?</h1>
+	<h2>Quel est le concept du jeu ?</h2>
 
 	<p>Le nom provient de Bullet Hell, un concept apparu dans les années 90 et rendu populaire au Japon par la série Touhou Project. Le joueur doit combattre un ou plusieurs ennemis qui ont chacun des attaques particulières, qui sont notamment constituées de dizaines, voire de centaines de projectiles apparaissant simultanément à l'écran. Il faut ainsi éviter ces attaques avec de l'observation, de la logique, de la mémoire, des réflexes.</p>
 
-	<h1>Comment fonctionne l'éditeur ?</h1>
+	<h2>Comment fonctionne l'éditeur ?</h2>
 
 	<p>Lorsqu'un niveau est joué, l'ennemi initiera ses attaques, déterminées par un code JSON. Pas besoin de connaître la programmation, l'éditeur permet de personnaliser les attaques : apparence, positionnement, mouvement, quantité de projectiles, enchaînement des attaques... Les possibilités sont infinies.</p>
 
-	<a href="https://github.com/ChacsGames/BulletHellMaker/tree/gh-pages">Voir le code source sur GitHub</a>
+	<br />
+	<p><a href="https://github.com/ChacsGames/BulletHellMaker/tree/gh-pages">Voir le code source sur GitHub</a></p>
 </body>
 </html>
