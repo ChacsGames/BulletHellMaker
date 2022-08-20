@@ -27,6 +27,10 @@
 		p, a {font-family: Calibri, Verdana; color: #330; margin: 5px 20px 5px 20px; font-size: 16px;}
 		a {color: #0ac;}
 		hr {color: #577; margin: 10px 20px}
+		.magnify {width: 192px; height: 192px;}
+		.groupe-images {display: inline-block; margin: 5px 20px; padding: 10px;}
+		.groupe-images img {margin: 5px;}
+		.image-legende {display: inline-block; vertical-align: top; width: 202px; background-color: #ccd; border: 2px solid #bbc; margin: 5px 0;}
 	</style>
 </head>
 <body onload="init();">
@@ -50,7 +54,32 @@
 
 	<p>Lorsqu'un niveau est joué, l'ennemi initiera ses attaques, déterminées par un code JSON. Pas besoin de connaître la programmation, l'éditeur permet de personnaliser les attaques : apparence, positionnement, mouvement, quantité de projectiles, enchaînement des attaques... Les possibilités sont infinies.</p>
 
+	<span class="groupe-images">
+		<span class="image-legende">
+			<img src="scr4.png" class="magnify" />
+			<p>Illustration du "Bullet Hell", où l'esquive de l'attaque de l'ennemi est un vrai défi.</p>
+		</span>
+		<span class="image-legende">
+			<img src="scr1.png" class="magnify" />
+			<p>La première page de l'éditeur, avec une attaque en exemple.</p>
+		</span>
+		<span class="image-legende">
+			<img src="scr3.png" class="magnify" />
+			<p>Une autre page de l'éditeur, où la quantité de projectiles est définie.</p>
+		</span>
+		<span class="image-legende">
+			<img src="scr2.png" class="magnify" />
+			<p>Un test de l'exemple précédent, avec l'aperçu de l'attaque.</p>
+		</span>
+	</span>
 	<br />
 	<p><a href="https://github.com/ChacsGames/BulletHellMaker/tree/gh-pages">Voir le code source sur GitHub</a></p>
 </body>
+<script type="text/javascript" src="jquery.magnifier.js">
+	/***********************************************
+	* jQuery Image Magnify- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+	* Please keep this notice intact
+	* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+	***********************************************/
+</script>
 </html>
