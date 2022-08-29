@@ -5,6 +5,8 @@ var frames = 0;
 var fpsOn = false, fpsText;
 var paused = false;
 var activity = 0;
+var imgD = "images/";
+var sndD = "sounds/";
 // input
 var keysPressed = [], mouseMode = true;
 // texte
@@ -152,32 +154,34 @@ function init()
 					{id: "background game lv7", src: "background game lv7.png"},
 					{id: "background game lv8", src: "background game lv7.png"}];
 
+	loadList.forEach(element => element.src = imgD + element.src);
+
 	loader = new createjs.LoadQueue(false);
 	loader.addEventListener("complete", handleComplete);
 	loader.addEventListener("progress", handleProgress);
 	loader.loadManifest(loadList);
 
-	createjs.Sound.registerSound("button.ogg", "button");
-	createjs.Sound.registerSound("hit.ogg", "hit");
-	createjs.Sound.registerSound("hit 2.ogg", "hit2", 3);
-	createjs.Sound.registerSound("win.ogg", "win");
-	createjs.Sound.registerSound("fail.ogg", "fail");
-	createjs.Sound.registerSound("bomb.ogg", "bomb");
-	createjs.Sound.registerSound("combobreak.ogg", "combobreak");
-	createjs.Sound.registerSound("shot player.ogg", "shot player", 3);
-	createjs.Sound.registerSound("shot slowbullet.ogg", "shot1", 3);
-	createjs.Sound.registerSound("shot mediumbullet.ogg", "shot2", 3);
-	createjs.Sound.registerSound("shot fastbullet.ogg", "shot3", 5);
-	createjs.Sound.registerSound("shot explosion.ogg", "shot4", 3);
-	createjs.Sound.registerSound("shot laserbeam.ogg", "shot5", 8);
-	createjs.Sound.registerSound("shot laserbullet.ogg", "shot6", 3);
-	createjs.Sound.registerSound("shot launcher.ogg", "shot7", 3);
-	createjs.Sound.registerSound("shot drop.ogg", "shot8", 3);
-	createjs.Sound.registerSound("shot missile.ogg", "shot9", 3);
-	createjs.Sound.registerSound("shot shock.ogg", "shot10", 3);
-	createjs.Sound.registerSound("shot fire.ogg", "shot11", 3);
-	createjs.Sound.registerSound("shot magic.ogg", "shot12", 5);
-	createjs.Sound.registerSound("shot sonicwave.ogg", "shot13", 3);
+	createjs.Sound.registerSound(sndD + "button.ogg", "button");
+	createjs.Sound.registerSound(sndD + "hit.ogg", "hit");
+	createjs.Sound.registerSound(sndD + "hit 2.ogg", "hit2", 3);
+	createjs.Sound.registerSound(sndD + "win.ogg", "win");
+	createjs.Sound.registerSound(sndD + "fail.ogg", "fail");
+	createjs.Sound.registerSound(sndD + "bomb.ogg", "bomb");
+	createjs.Sound.registerSound(sndD + "combobreak.ogg", "combobreak");
+	createjs.Sound.registerSound(sndD + "shot player.ogg", "shot player", 3);
+	createjs.Sound.registerSound(sndD + "shot slowbullet.ogg", "shot1", 3);
+	createjs.Sound.registerSound(sndD + "shot mediumbullet.ogg", "shot2", 3);
+	createjs.Sound.registerSound(sndD + "shot fastbullet.ogg", "shot3", 5);
+	createjs.Sound.registerSound(sndD + "shot explosion.ogg", "shot4", 3);
+	createjs.Sound.registerSound(sndD + "shot laserbeam.ogg", "shot5", 8);
+	createjs.Sound.registerSound(sndD + "shot laserbullet.ogg", "shot6", 3);
+	createjs.Sound.registerSound(sndD + "shot launcher.ogg", "shot7", 3);
+	createjs.Sound.registerSound(sndD + "shot drop.ogg", "shot8", 3);
+	createjs.Sound.registerSound(sndD + "shot missile.ogg", "shot9", 3);
+	createjs.Sound.registerSound(sndD + "shot shock.ogg", "shot10", 3);
+	createjs.Sound.registerSound(sndD + "shot fire.ogg", "shot11", 3);
+	createjs.Sound.registerSound(sndD + "shot magic.ogg", "shot12", 5);
+	createjs.Sound.registerSound(sndD + "shot sonicwave.ogg", "shot13", 3);
 	createjs.Sound.volume = 0.7;
 
 	stage.addChild(gameBackground, loadProgressLabel, loadingBarContainer);
@@ -204,7 +208,7 @@ function handleComplete()
 function start()
 {
 	activity = 1;
-	sheet = new createjs.SpriteSheet({images: ["shot sheet.png"], frames: {width: 100, height: 100, spacing: 1}});
+	sheet = new createjs.SpriteSheet({images: [imgD + "shot sheet.png"], frames: {width: 100, height: 100, spacing: 1}});
 
 	var menuBackground = new createjs.Bitmap(loader.getResult("background menu"));
 
